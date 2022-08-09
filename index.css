@@ -1,0 +1,591 @@
+:root {
+    --bg-color: #379fc2;
+    --btn-color: #1363DF;
+    --txt-color: #f9f5eb;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: var(--bg-color);
+    font-family: 'Open sans', sans-serif;
+    background-size: cover;
+    overflow-x: hidden;
+}
+header {
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+header > img {
+    width: 20%;
+    height: 150px;
+    margin-top: -55px;
+    margin-left: -20px;
+}
+nav {
+    width: 60%;
+}
+.mobile-nav-toggle {
+    display: none;
+}
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 45px;
+}
+li {
+    list-style: none;
+    font-size: 14px;
+}
+li > a {
+    color: var(--txt-color);
+    text-decoration: none;
+}
+header > button, .txt-div > button {
+    width: 120px;
+    height: 40px;
+    margin-top: 20px;
+    font-family: inherit;
+    border: none;
+    background-color: #1363DF;
+    color: var(--txt-color);
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 8px;
+}
+#carousel-div {
+    width: 100%;
+    background: url("https://media.istockphoto.com/photos/view-of-wind-turbines-generating-electricity-in-english-channel-from-picture-id1193284558?k=20&m=1193284558&s=612x612&w=0&h=yW_cwTKo23hN8anVXelnFfmg6N_DFubYbriyc0HE_AI=");
+    background-size: contain;
+}
+.carousel {
+    position: relative;
+    height: 500px;
+    width: 60%;
+    margin: 0 auto;
+}
+.carousel-track-container {
+    background: var(--bg-color);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.carousel-track {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+.img-txt {
+    font-size: 15px;
+    padding: 8px 0px;
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    right: 0;
+    border: 2px solid var(--bg-color);
+    background: var(--bg-color);
+    text-align: center;
+}
+.img-txt > h3 {
+    color: var(--txt-color);
+    font-size: 2.4em;
+}
+.img-txt > p {
+    line-height: 1.4;
+    color: var(--txt-color);
+}
+.carousel-btn-left {
+    left: -40px;
+}
+.carousel-btn-right {
+    right: -40px;
+}
+.carousel-btn > i {
+    font-size: 25px;
+    color: #fff;
+}
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    border: 2px solid var(--txt-color);
+    display: block;
+}
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.carousel-indicator {
+    border: 0;
+    margin: 0 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    background: #4682b4;
+}
+.carousel-indicator.current-slide {
+    background: #fff;
+}
+.is-hidden {
+    display: none;
+}
+#about {
+    display: flex;
+    margin-top: 70px;
+    color: var(--txt-color);
+    justify-content: center;
+    font-size: 1.1em;
+}
+.img-div {
+    width: 550px;
+    margin-right: 50px;
+}
+.img-div > img {
+    width: 540px;
+}
+.txt-div {
+    width: 500px;
+    line-height: 2;
+    position: relative;
+    top: 10px;
+}
+span {
+    font-size: 2em;
+    color: #1363DF;
+    font-weight: 700;
+}
+button > a {
+    text-decoration: none;
+    color: var(--txt-color);
+}
+hr {
+    margin-top: 40px;
+}
+#services {
+    background: url("https://media.istockphoto.com/photos/underwater-fiber-optic-cable-on-ocean-floor-picture-id1362710800?k=20&m=1362710800&s=612x612&w=0&h=5GA1SQIHVcS1V7dUGkQiVDm4lau58WGkfLN-sUR1hD4=");
+    background-size: cover;
+    padding-top: 50px;
+}
+#services > h3 {
+    color: var(--txt-color);
+    font-size: 2.2em;
+    text-align: center;
+    text-decoration: underline;
+}
+#service-div {
+    margin-top: 30px;
+    color: var(--txt-color);
+    display: grid;
+    justify-content: center;
+    grid-gap: 30px;
+    grid-template-columns: 380px 380px 380px;
+    grid-template-rows: 500px 500px;
+}
+.service {
+    width: 350px;
+}
+.service > img {
+    width: 350px;
+    height: 300px;
+}
+.service > h4 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    text-decoration-color: var(--btn-color);
+}
+.service > p {
+    font-size: 14px;
+    line-height: 1.9;
+}
+  /* CONTACT */
+  #contact {
+    display: flex;
+    flex-direction: column;
+  }
+  .showcase {
+    background-color: var(--bg-color);
+    padding: 5rem;
+    text-align: center;
+    line-height: 3rem;
+  }
+  .showcase h1 {
+    font-size: 2.5rem;
+  }
+  .showcase p {
+    font-size: 1.2rem;
+  }
+  .contact--card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 3rem 7rem;
+    align-items: center;
+  }
+  .contact--card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .contact--info {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact--info img {
+    width: 300px;
+  }
+  .contact--info div {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem;
+  }
+  .contact--info div span {
+    margin-right: 1rem;
+  }
+  .contact--info div span i {
+    font-size: 1.5rem;
+  }
+  .contact--card form {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  .contact--card form label {
+    font-size: 1.5rem;
+    width: 80%;
+    text-align: center;
+    font-weight: 600;
+    align-self: center;
+  }
+  .contact--card form > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .contact--card form input {
+    height: 2.5rem;
+    border-radius: 10px;
+    border: 1px solid #cecbcb;
+    padding: 1rem;
+  }
+  .contact--card form input::placeholder {
+    color: #cecbcb;
+  }
+  .contact--card form textarea {
+    border-radius: 10px;
+    border: 1px solid #cecbcb;
+    padding: 1rem;
+  }
+  .contact--card form textarea::placeholder {
+    color: #cecbcb;
+  }
+  .contact--card form input[type="submit"] {
+    border: none;
+    background-color: var(--btn-color);
+    color: white;
+  }
+  /* FOOTER */
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #cecbcb;
+  }
+  footer .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .logo img {
+    width: 200px;
+    height: 200px;
+  }
+  footer .logo div {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    position: relative;
+    top: -1.5rem;
+  }
+  footer .logo div a {
+    text-decoration: none;
+    color: black;
+  }
+  footer .logo div a:hover {
+    color: var(--btn-color);
+  }
+  footer .logo div i {
+    font-size: 1.5rem;
+  }
+  footer .footer--nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+  .footer--nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footer--nav ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  .footer--nav ul li a:hover {
+    color: var(--btn-color);
+    border-bottom: 2px solid var(--btn-color);
+  }
+  footer .form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  footer form input[type="text"] {
+    width: 250px;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+  footer form input[type="submit"] {
+    /* height: 2rem; */
+    border-radius: 5px;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: var(--btn-color);
+    border: none;
+    color: white;
+  }
+  .form p {
+    font-size: 0.8rem;
+  }
+@media screen and (min-width: 1023px) and (max-width: 1200px) {
+    #service-div {
+        grid-gap: 25px;
+        text-align: center;
+       grid-template-columns: 330px 330px 330px;
+    }
+    .service {
+        width: 330px;
+    }
+    .service > img {
+        width: 300px;
+        height: 270px;
+    }  
+    .service > p {
+        width: 330px;
+    }
+}
+@media screen and (min-width: 770px) and (max-width: 1022px) {
+    header > img {
+        margin-left: -13px;
+    }
+    nav {
+        width: 68%;
+    }
+    .carousel {
+        height: 400px;
+        width: 70%;
+    }
+    .img-txt {
+        font-size: 14px;
+        width: 70%;
+        height: 170px;
+    }
+    .img-txt > p {
+        line-height: 1.65;
+    }
+    #about {
+        font-size: 0.9em;
+    }
+    .img-div {
+        width: 370px;
+        margin-right: 10px;
+    }
+    .img-div > img {
+        width: 370px;
+    }
+    .txt-div {
+        width: 380px;
+        top: 0px;
+        text-align: center;
+    }
+    #service-div {
+        grid-gap: 10px;
+        text-align: center;
+        place-items: center;
+        grid-template-columns: 370px 370px;
+        grid-template-rows: 500px 500px 500px;
+    }
+    .service > img {
+        height: 280px;
+    }
+    .service > h4 {
+        margin-top: 20px;
+    }
+}
+@media screen and (min-width: 550px) and (max-width: 769px) {
+    header {
+        width: 100%;
+        height: 90px;
+    }
+    header > img {
+        width: 25%;
+        height: 90px;
+        margin-left: -12px;
+        margin-top: -30px;
+    }
+    .primary-navigation {
+        padding: min(30vh, 10rem) 2em;
+        margin: 0;
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 10%;
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+        flex-direction: column;
+        backdrop-filter: blur(1rem);
+        background: hsl(0 0% 100% / 0.1)
+    }
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        background-color: transparent;
+        width: 2rem;
+        aspect-ratio: 1;
+        top: 2rem;
+        margin-top: -15px;
+        right: 2rem;
+        z-index: 9999;
+        background-image: url("images/justify.png");
+    }
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url("images/x.png");
+        background-repeat: no-repeat;
+    }
+    header > button{
+        height: 30px;
+        margin-top: 50px;
+        font-size: 12px;
+    }
+    .carousel {
+        height: 300px;
+        width: 55%;
+    }
+    .img-txt {
+        font-size: 12px;
+        width: 80%;
+        height: 130px;
+    }
+    .img-txt > h3 {
+        font-size: 1.8em;
+    }
+    .img-txt > p {
+        line-height: 1.3;
+    }
+
+    #about {
+        display: flex;
+        font-size: 0.9em;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("https://images.pexels.com/photos/70419/pexels-photo-70419.jpeg?auto=compress&cs=tinysrgb&w=600");
+    }
+    .img-div {
+        width: 200px;
+        margin-right: 50px;
+    }
+    .img-div > img {
+        width: 540px;
+        display: none;
+    }
+    .txt-div {
+        width: 500px;
+        line-height: 2;
+        color: #000;
+        position: relative;
+        top: 10px;
+        text-align: center;
+        padding-top: 40px;
+    }
+    span {
+        font-size: 2em;
+        color: #1363DF;
+        font-weight: 700;
+    }
+    button > a {
+        text-decoration: none;
+        color: var(--txt-color);
+    }
+    hr {
+        margin-top: 40px;
+    }
+    #services {
+        background: url("https://media.istockphoto.com/photos/underwater-fiber-optic-cable-on-ocean-floor-picture-id1362710800?k=20&m=1362710800&s=612x612&w=0&h=5GA1SQIHVcS1V7dUGkQiVDm4lau58WGkfLN-sUR1hD4=");
+        background-size: cover;
+        padding-top: 50px;
+    }
+    #services > h3 {
+        color: var(--txt-color);
+        font-size: 2.2em;
+        text-align: center;
+        text-decoration: underline;
+    }
+    #service-div {
+        margin-top: 30px;
+        color: var(--txt-color);
+        display: grid;
+        justify-content: center;
+        grid-gap: 30px;
+        grid-template-columns: 380px 380px 380px;
+        grid-template-rows: 500px 500px;
+    }
+    .service {
+        width: 350px;
+    }
+    .service > img {
+        width: 350px;
+        height: 300px;
+    }
+    .service > h4 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+        text-decoration: underline;
+        text-decoration-color: var(--btn-color);
+    }
+    .service > p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+}
